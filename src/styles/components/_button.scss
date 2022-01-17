@@ -1,0 +1,47 @@
+@import '../breakpoints';
+
+.button {
+  margin: 0px 5.5% 0px;
+  background: rgba(0, 0, 0, 0.6);
+  border-radius: 4px;
+  width: 288px;
+  height: 67px;
+  border: 4px solid #6b63b5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+
+  &:hover {
+    background: rgba(107, 99, 181, 0.6);
+  }
+
+  @include media-up(sm) {
+    width: 140px;
+    height: 42.93px;
+    margin: 0px 2% 0px;
+    box-sizing: border-box;
+    border-radius: 2.56277px;
+  }
+}
+
+.button p {
+  font-family: Open Sans;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 17px;
+  line-height: 25px;
+  text-align: center;
+  letter-spacing: 0.2em;
+  color: #ffffff;
+  border-radius: 4px;
+
+  @include media-up(sm) {
+    font-size: 13px;
+    line-height: 16px;
+  }
+}
+
+.button__active {
+  background: #6b63b5;
+}

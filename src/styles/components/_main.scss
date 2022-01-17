@@ -1,0 +1,89 @@
+@import '../breakpoints';
+
+.main {
+  max-width: 1284px;
+  max-height: 722px;
+  display: flex;
+  flex-direction: column;
+}
+
+.main__menu {
+  position: absolute;
+  left: 926px;
+
+  @include media-up(xl) {
+    left: auto;
+    right: 6%;
+  }
+
+  @include media-up(sm) {
+    left: 0;
+    right: 0;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    position: relative;
+  }
+}
+
+.main__header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.main__cards {
+  display: flex;
+  justify-content: center;
+
+  @include media-up(sm) {
+    padding-bottom: 50px;
+  }
+}
+
+.main__logo {
+  margin-top: 142px;
+  width: 193.8px;
+  height: 66px;
+
+  @include media-up(xl) {
+    margin-top: 11%;
+  }
+
+  @include media-up(md) {
+    width: 123.33px;
+    height: 42px;
+  }
+}
+
+.main__select-filter {
+  margin-top: 31px;
+  font-family: Open Sans;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 36px;
+  line-height: 25px;
+  text-align: center;
+  color: #ffffff;
+
+  @include media-up(xl) {
+    margin-top: 2.6%;
+  }
+
+  @include media-up(md) {
+    font-size: 18px;
+  }
+}
+
+.main__buttons {
+  margin-top: 64px;
+  display: flex;
+  justify-content: center;
+
+  @include media-up(xl) {
+    margin-top: 5%;
+  }
+}

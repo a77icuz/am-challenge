@@ -1,0 +1,129 @@
+@import '../breakpoints';
+
+.menu__container {
+  width: 281px;
+  max-height: 312px;
+  overflow: hidden;
+  background: #6b63b5;
+  display: flex;
+  flex-direction: column;
+  border-radius: 0px 0px 10px 10px;
+
+  @include media-up(sm) {
+    flex-direction: column-reverse;
+    border-radius: 10px 10px 0px 0px;
+    position: fixed;
+    margin-right: 9px;
+    bottom: 0;
+    left: 1;
+    right: 1;
+    
+  }
+}
+
+.menu__options {
+  width: 100%;
+  min-height: 36px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #6b63b5;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 0px 0px 10px 10px;
+
+  @include media-up(sm) {
+    box-shadow: 0px -4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 10px 10px 0px 0px;
+  }
+}
+
+.menu__options #line {
+  margin-left: 20px;
+  margin-right: 20px;
+  min-height: 36px;
+  border-right: 1px #403b6d solid;
+}
+
+.menu__options p {
+  margin-right: 4px;
+  font-family: Open Sans;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 25px;
+  text-align: center;
+  color: #ffffff;
+}
+
+.menu__options-fav {
+  cursor: pointer;
+}
+
+.menu__options-add {
+  cursor: pointer;
+}
+
+.menu__favorites {
+  display: none;
+}
+
+.menu__favorites-active {
+  display: flex;
+  flex-direction: column;
+  padding-top: 18px;
+  padding-left: 15px;
+}
+
+.menu__favorites-list {
+  width: 241px;
+  height: 46px;
+  margin-bottom: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-bottom: 1px #403b6d solid;
+
+  @include media-up(sm) {
+    margin-bottom: 0px;
+    margin-top: 7px;
+  }
+}
+
+.menu__favorites-list img {
+  margin-right: 10px;
+  margin-bottom: 6px;
+  width: 32px;
+  height: 32px;
+  object-fit: cover;
+  object-position: 50% 30%;
+  border-radius: 50%;
+}
+
+.menu__favorites-list p {
+  min-width: 169px;
+  margin-bottom: 6px;
+  font-family: Open Sans;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 25px;
+  text-align: left;
+  color: #ffffff;
+}
+
+.menu__empty {
+  margin-bottom: 6px;
+  margin-right: 25px;
+  font-family: Open Sans;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 25px;
+  text-align: center;
+  color: #ffffff;
+}
+
+.menu__favorites-list #garbage {
+  cursor: pointer;
+  margin-bottom: 2px;
+}
