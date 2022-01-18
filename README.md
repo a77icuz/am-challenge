@@ -18,7 +18,7 @@ Este proyecto fue creado utilizando [ViteJs](https://github.com/vitejs/vite).
 Para el correcto funcionamiento de la aplicación y por requerimiento de la evaluación, es necesario montar un Fake API Rest con [json-server](https://github.com/typicode/json-server).
 
 1. Instalar json-server con el comando `npm install -g json-server` desde la terminal con privilegios de administrador.
-2. Navegar al directorio `.../src/db` de nuestro proyecto donde se ubica el archivo `hp-characters.json`.
+2. Navegar al directorio `./src/db` de nuestro proyecto donde se ubica el archivo `hp-characters.json`.
 3. Ejecutar el comando `json-server --watch hp-characters.json --port 4000` para montar nuestro servidor.
 
 
