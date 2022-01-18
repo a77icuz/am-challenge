@@ -42,6 +42,6 @@ Puedes ejecutar los siguientes comandos via `npm run [comando]`:
 * Implementar animaciones de  transición para suavizar la vista durante la renderización de componentes.
 * Implementar validación de inputs en el formulario de "Agregar".
 
-## Descríbenos un pain point o bug con el que te hayas encontrado y como lo solucionaste
+### Descríbenos un pain point o bug con el que te hayas encontrado y como lo solucionaste
 
 * Implementar el cambio de color de acuerdo a la casa a la que pertenece el personaje, ya que son difentes casas y asi como tambien existen usuarios en la BD que no pertenencen a una casa en especifico, por lo que se opte crear un diccionario para hacer el render del background.
