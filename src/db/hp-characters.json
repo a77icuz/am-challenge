@@ -549,6 +549,18 @@
       "actor": "David Bradley",
       "alive": true,
       "image": "http://hp-api.herokuapp.com/images/filch.jpg"
+    },
+    {
+      "id": 1642481016776,
+      "alive": true,
+      "name": "José Hernández",
+      "dateOfBirth": "2014-07-24",
+      "eyeColour": "Cafes",
+      "hairColour": "Castaño",
+      "gender": "male",
+      "hogwartsStudent": true,
+      "hogwartsStaff": false,
+      "image": "https://res.cloudinary.com/dn6unzxco/image/upload/v1642481015/bo6qftn6jbsxunevlwo7.jpg"
     }
   ]
 }
