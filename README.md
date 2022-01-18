@@ -44,4 +44,5 @@ Puedes ejecutar los siguientes comandos via `npm run [comando]`:
 
 ### Descríbenos un pain point o bug con el que te hayas encontrado y como lo solucionaste
 
+* Tener que levantar el Fake API Server antes de visualizar la applicación, ya que de lo contrario da la impresión de que la app no esta trabajando correctamente.
 * Implementar el cambio de color de acuerdo a la casa a la que pertenece el personaje, ya que son difentes casas y asi como tambien existen usuarios en la BD que no pertenencen a una casa en especifico, por lo que se opte crear un diccionario para hacer el render del background.
