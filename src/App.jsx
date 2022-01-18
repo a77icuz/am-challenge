@@ -11,6 +11,7 @@ import Button from './components/ui/Button';
 
 import { modalStyles } from './helpers/styles';
 import logo from './assets/logo.png';
+import MetaData from './components/ui/MetaData';
 
 Modal.setAppElement(document.getElementById('root'));
 
@@ -26,11 +27,9 @@ export default function App() {
 
   return (
     <FormContext.Provider value={setIsOpen}>
+      <MetaData />
       <div className='main'>
-        <Modal
-          isOpen={modalIsOpen}
-          style={modalStyles}
-        >
+        <Modal isOpen={modalIsOpen} style={modalStyles}>
           <Form />
         </Modal>
         <div className='main__menu'>
@@ -50,8 +49,7 @@ export default function App() {
           <Card />
         </div>
 
-        <div className='main__menu'>
-        </div>
+        <div className='main__menu'></div>
       </div>
     </FormContext.Provider>
   );
