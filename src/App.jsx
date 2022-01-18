@@ -1,45 +1,58 @@
-import { useState } from 'react'
-import logo from './logo.svg'
-import './App.css'
+import { useEffect, useState, createContext } from 'react';
+import { useDispatch } from 'react-redux';
+import Modal from 'react-modal';
 
-function App() {
-  const [count, setCount] = useState(0)
+import { getAllCharacters } from './actions/characters';
+
+import Menu from './components/Menu/Menu';
+import Card from './components/Card/Card';
+import Form from './components/Form/Form';
+import Button from './components/ui/Button';
+
+import { modalStyles } from './helpers/styles';
+import logo from './assets/logo.png';
+
+Modal.setAppElement(document.getElementById('root'));
+
+export const FormContext = createContext();
+
+export default function App() {
+  const [modalIsOpen, setIsOpen] = useState(false);
+
+  const dispatch = useDispatch();
+  useEffect(() => {
+    dispatch(getAllCharacters());
+  }, [dispatch]);
 
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>Hello Vite + React!</p>
-        <p>
-          <button type="button" onClick={() => setCount((count) => count + 1)}>
-            count is: {count}
-          </button>
-        </p>
-        <p>
-          Edit <code>App.jsx</code> and save to test HMR updates.
-        </p>
-        <p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-          {' | '}
-          <a
-            className="App-link"
-            href="https://vitejs.dev/guide/features.html"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Vite Docs
-          </a>
-        </p>
-      </header>
-    </div>
-  )
-}
+    <FormContext.Provider value={setIsOpen}>
+      <div className='main'>
+        <Modal
+          isOpen={modalIsOpen}
+          style={modalStyles}
+        >
+          <Form />
+        </Modal>
+        <div className='main__menu'>
+          <Menu setIsOpen={'x'} />
+        </div>
 
-export default App
+        <div className='main__header'>
+          <img className='main__logo' src={logo} />
+          <div className='main__select-filter'>Selecciona tu filtro</div>
+        </div>
+
+        <div className='main__buttons'>
+          <Button />
+        </div>
+
+        <div className='main__cards'>
+          <Card />
+        </div>
+
+        <div className='main__menu'>
+        </div>
+      </div>
+    </FormContext.Provider>
+  );
+}
