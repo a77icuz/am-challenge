@@ -35,9 +35,7 @@ export const addNewCharacter = (char) => async (dispatch) => {
       alive: true,
       ...char,
     })
-    .then((response) => {
-      console.log(response);
-    });
+    .then((response) => {});
 
   const { data } = await axios.get(`${baseUrl}/character`);
   dispatch({ type: charactersTypes.addNewSuccess, payload: data });

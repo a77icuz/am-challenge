@@ -43,7 +43,6 @@ export const charactersReducer = (state = { characters: [] }, { type, payload })
       };
 
     case charactersTypes.addNewSuccess:
-      console.log(payload);
       return {
         loading: false,
         characters: payload,
